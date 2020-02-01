@@ -19,7 +19,7 @@ class OERHTTPHandler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         content_length = int(self.headers['Content-Length'])
-        post_data = str(self.rfile.read(content_length), "UTF-8").split("=")
+        post_data = str(self.rfile.read(content_length), "UTF-8")
 
         response = query_handler.handle_post_request(self.path, post_data)
         if response[1] is None:

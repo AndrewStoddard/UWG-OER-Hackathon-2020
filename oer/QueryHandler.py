@@ -31,7 +31,11 @@ class QueryHandler:
         return bytes(self.__web_generator.generate_resources_page(self.__resource_manager.get_all_resources()), self.__encoding)
 
     def handle_post_request(self, request: str, post_data: str) -> Tuple[str, bytes]:
-        return 'text/html', self.__handle_index_request()
+        search_query = post_data.split("=")[1].split("&")[0]
+        return 'text/html', self.__handle_search_request(search_query)
+
+    def __handle_search_request(self, search_query: str) -> bytes:
+        return bytes(self.__web_generator.generate_resources_page(self.__resource_manager.search(search_query)), self.__encoding)
 
 def read_file_bytes(file_path: str) -> bytes:
     try:

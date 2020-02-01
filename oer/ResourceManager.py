@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, List
 from Resource import Resource
 from DatabaseManager import DatabaseManager
 
@@ -22,3 +22,9 @@ class ResourceManager:
     def get_all_resources(self):
         return self.__resource_list
 
+    def search(self, subject: str) -> List[Resource]:
+        new_resources = []
+        for resource in self.__resource_list:
+            if resource.subject == subject:
+                new_resources.append(resource)
+        return new_resources

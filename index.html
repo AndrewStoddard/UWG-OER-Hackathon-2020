@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="flex-container-mid">
-                    <div><select id="subject-field" onchange="changecat(this.value);">
+                    <div><select name="subject" id="subject-field" onchange="changecat(this.value);">
                     <option value="" hidden>Subject</option>
                     <option value="ACCT">ACCT</option>
                     <option value="BIOL">BIOL</option>
@@ -87,7 +87,7 @@
                     </div>
                 </div>
                 <div class="flex-container-submit">
-                    <div id="submit"><button id="searchButton" type="button" onclick="window.location.href = '/all';">Search</button></div>
+                    <div id="submit"><button id="searchButton" type="submit" formmethod="post">Search</button></div>
                 </div>
             </form>
         </div>
