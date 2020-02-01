@@ -55,34 +55,31 @@ class WebGenerator:
         self.__body = Html()
         self.__generate_html_header()
 
-        self.__body.tag('div', id_='"buffer"'):
+        self.__body.tag('div', id_='"buffer"')
         self.__generate_lib_logo()
-        self.__body.tag('div', id_='"form"'):
-            with self.__body.tag('form', classes=["add-form"])
-                self.__body.tag('div', id='"title-div"')
-                    with self.__body.self_close_tag('input', attributes=dict(id='"title-field"', type="text", placeholder="Title..."))
-                self.__body.tag('div', id='"author-div"')
-                    with self.__body.self_close_tag('input', attributes=dict(id='"author-field"', type="text", placeholder="Author..."))
-                self.__body.tag('div', id='"isbn-div"')
-                    with self.__body.self_close_tag('input', attributes=dict(id='"isbn-field"', type="text", placeholder="ISBN..."))
-                self.__body.tag('div', id='"subject-div"')
-                    with self.__body.self_close_tag('input', attributes=dict(id='"subject-field"', type="text", placeholder="Subject..."))
-                self.__body.tag('div', id='"link-div"')
-                    with self.__body.self_close_tag('input', attributes=dict(id='"link-field"', type="text", placeholder="Link..."))
-                self.__body.tag('div', id='"type-div"')
-                    with self.__body.tag('select', id='"type-add-field"')
-                        # with self.__body.tag_with_content() TODO
-                self.__body.tag('div', id='"submit-div"')
-                    with self.__body.tag_with_content("Add", 'button', attributes=dict(id='"add-submit"', type="button")
-
-              
+        with self.__body.tag('div', id_='"form"'):
+            with self.__body.tag('form', classes=["add-form"]):
+                with self.__body.tag('div', id_='"title-div"'):
+                    self.__body.self_close_tag('input', attributes=dict(id='"title-field"', type="text", placeholder="Title..."))
+                with self.__body.tag('div', id_='"author-div"'):
+                    self.__body.self_close_tag('input', attributes=dict(id='"author-field"', type="text", placeholder="Author..."))
+                with self.__body.tag('div', id_='"isbn-div"'):
+                    self.__body.self_close_tag('input', attributes=dict(id='"isbn-field"', type="text", placeholder="ISBN..."))
+                with self.__body.tag('div', id_='"subject-div"'):
+                    self.__body.self_close_tag('input', attributes=dict(id='"subject-field"', type="text", placeholder="Subject..."))
+                with self.__body.tag('div', id_='"link-div"'):
+                    self.__body.self_close_tag('input', attributes=dict(id='"link-field"', type="text", placeholder="Link..."))
+                with self.__body.tag('div', id_='"type-div"'):
+                    self.__body.tag('select', id_='"type-add-field"')
+                with self.__body.tag('div', id_='"submit-div"'):
+                    self.__body.tag_with_content("Add", 'button', attributes=dict(id='"add-submit"', type="button"))
+        return Html.html_template(self.__head, self.__body).to_raw_html(indent_size=2)
     
-
     def __generate_lib_logo(self):
-        with self.__body.tag('div', id_='"library-logo"')
+        with self.__body.tag('div', id_='"library-logo"'):
             self.__body.self_close_tag('img', attributes=dict(src="images/banner-ingram-library.png"))
     
 
 
 if __name__ == '__main__':
-    print(WebGenerator().generate_index())
+    print(WebGenerator().generate_add_page())

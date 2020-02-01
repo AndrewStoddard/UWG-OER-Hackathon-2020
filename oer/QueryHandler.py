@@ -19,6 +19,8 @@ class QueryHandler:
             return '', read_file_bytes(request)
         if request == "/all":
             return 'text/html', self.__handle_resources_request()
+        if request == "/add":
+            return 'text/html', bytes(self.__web_generator.generate_add_page(), self.__encoding)
         else:
             return 'text/html', self.__handle_index_request()
 
