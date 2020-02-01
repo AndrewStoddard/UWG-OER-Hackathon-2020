@@ -4,9 +4,7 @@
 <head>
     <title>Add a resource</title>
     <link rel="stylesheet" type="text/css" href="style\style.css">
-    <style>
 
-    </style>
     <div class="header">
         <img src="images/word logo.png" class="header-logo">
 
@@ -19,11 +17,14 @@
 <body>
     <!-- title author isbm link subject type -->
     <div class="buffer"></div>
+    <div class="library-logo">
+        <img src="images/banner-ingram-library.png" alt="library logo">
+    </div>
     <div class="form">
         <form class="add-form">
             <div class="title-div">
 
-                <input id="title-field" type="text" placeholder="Title...">
+                <input id="title-field" type="text" placeholder="Title..." required>
 
             </div>
             <div class="author-div">
@@ -37,13 +38,19 @@
                 <input id="isbn-field" type="text" placeholder="ISBN...">
             </div>
 
+            <div class="subject-div">
+
+
+                <input id="subject-field" type="text" placeholder="Subject...">
+            </div>
+
             <div class="link-div">
 
 
-                <input id="link-field" type="text" placeholder="Link...">
+                <input id="link-field" type="text" placeholder="Link..." required>
             </div>
             <div class="type-div">
-                <select id="type-add-field">
+                <select id="type-add-field" required>
                     <option value="" hidden>Type</option>
                     <option value="other/none">Other/None</option>
                     <option value="textbook">Textbook</option>
@@ -52,7 +59,7 @@
                 </select>
             </div>
             <div class="submit-div">
-                <button class="searchButton" type="button">Search</button>
+                <button id="add-submit" type="button">Add</button>
             </div>
 
         </form>
