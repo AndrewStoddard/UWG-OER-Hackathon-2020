@@ -20,42 +20,42 @@
         <form class="add-form">
             <div id="title-div">
 
-                <input id="title-field" type="text" placeholder="Title..." required>
+                <input name="title" id="title-field" type="text" placeholder="Title..." required>
 
             </div>
             <div id="author-div">
 
-                <input id="author-field" type="text" placeholder="Author...">
+                <input name="author" id="author-field" type="text" placeholder="Author...">
 
             </div>
             <div id="isbn-div">
 
 
-                <input id="isbn-field" type="text" placeholder="ISBN...">
+                <input name="isbn" id="isbn-field" type="text" placeholder="ISBN...">
             </div>
 
             <div id="subject-div">
 
 
-                <input id="subject-field" type="text" placeholder="Subject...">
+                <input name="subject" id="subject-field" type="text" placeholder="Subject...">
             </div>
 
             <div id="link-div">
 
 
-                <input id="link-field" type="text" placeholder="Link..." required>
+                <input name="link" id="link-field" type="text" placeholder="Link..." required>
             </div>
             <div id="type-div">
-                <select id="type-add-field" required>
+                <select name="type" id="type-add-field" required>
                     <option value="" hidden>Type</option>
-                    <option value="other/none">Other/None</option>
-                    <option value="textbook">Textbook</option>
-                    <option value="journals">Journals</option>
-                    <option value="articles">Articles</option>
+                    <option value="Other">Other/None</option>
+                    <option value="Text Book">Textbook</option>
+                    <option value="Journals">Journals</option>
+                    <option value="Articles">Articles</option>
                 </select>
             </div>
             <div id="submit-div">
-                <button id="add-submit" type="button">Add</button>
+                <button id="add-submit" formmethod="post" type="submit">Add</button>
             </div>
 
         </form>
