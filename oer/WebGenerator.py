@@ -14,7 +14,14 @@ class WebGenerator:
         self.__head.self_close_tag('link', attributes=dict(href="/style.css", rel="stylesheet", type="text/css"))
         with self.__head.tag('div', id_="header"):
             self.__head.self_close_tag('img', attributes=dict(src="images/word_logo.png"))
-            self.__head.tag_with_content("Name Place Holder", 'h1')
+            with self.__head.tag('div', id_="nav"):
+                with self.__head.tag('ul'): 
+                    with self.__head.tag('li'):
+                        self.__head.tag_with_content("Search", 'a', attributes=dict(href="/index.html"))
+                    with self.__head.tag('li'):
+                        self.__head.tag_with_content("All", 'a', attributes=dict(id="active", href="/all"))
+                    with self.__head.tag('li'):
+                        self.__head.tag_with_content("Add", 'a', attributes=dict(href="/add"))
 
     def generate_index(self, previous_search: str = "") -> str:
         self.__head = Html()
