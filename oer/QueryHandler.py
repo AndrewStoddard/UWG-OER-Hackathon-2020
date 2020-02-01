@@ -31,8 +31,17 @@ class QueryHandler:
         return bytes(self.__web_generator.generate_resources_page(self.__resource_manager.get_all_resources()), self.__encoding)
 
     def handle_post_request(self, request: str, post_data: str) -> Tuple[str, bytes]:
-        search_query = post_data.split("=")[1].split("&")[0]
-        return 'text/html', self.__handle_search_request(search_query)
+        if post_data.startswith("subject"):
+            search_query = post_data.split("=")[1].split("&")[0]
+            return 'text/html', self.__handle_search_request(search_query)
+        else:
+            vars = post_data.split("&")
+            resource_data = {}
+            for var in vars:
+                var_data = var.split("=")
+                resource_data[var_data[0]] = var_data[1].replace("+", " ")
+            self.__resource_manager.add_resource(resource_data)
+            return 'text/html', read_file_bytes("/add.html")
 
     def __handle_search_request(self, search_query: str) -> bytes:
         return bytes(self.__web_generator.generate_resources_page(self.__resource_manager.search(search_query)), self.__encoding)
