@@ -1,4 +1,4 @@
-from web import OERHTTPHandler
+from OERHTTPHandler import OERHTTPHandler
 from http.server import HTTPServer
 
 

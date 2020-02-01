@@ -4,7 +4,7 @@
     }
 }
 
-.header {
+#header {
     position: fixed;
     background-color: rgba(0, 84, 166, .9);
     width: 100%;
@@ -15,12 +15,12 @@
     height: 160px;
 }
 
-.header-logo {
+#header img {
     display: inline-block;
     opacity: 1;
 }
 
-.header-name {
+#header h1 {
     position: absolute;
     float: right;
     bottom: 0;
@@ -29,13 +29,18 @@
     margin-bottom: 0;
 }
 
-.results {
+#results {
     padding: 190px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.results>div {
+#results div img {
+    height: 150px;
+    width: 125px;
+}
+
+#results>div {
     box-shadow: -1px 1px 2px 4px rgba(0, 0, 0, 0.75);
     background-color: #f1f1f1;
     width: 300px;
@@ -46,7 +51,7 @@
     transition: all .2s ease-in-out;
 }
 
-.results>div:hover {
+#results>div:hover {
     transform: scale(1.05);
 }
 
