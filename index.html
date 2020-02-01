@@ -6,11 +6,10 @@
     <title>
         UWG Library Catalog
     </title>
-    <link rel="stylesheet" type="text/css" href="style\style.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
 
-    <div class="header">
-        <img src="images/word_logo.png" class="header-logo">
-
+    <div id="header">
+        <img src="images/word_logo.png">
         <h1 class="header-name">Name Place Holder</h1>
 
 
@@ -18,7 +17,7 @@
 </head>
 
 <body>
-
+    <div id="buffer"></div>
     <script>
         var catagories = {
             ACCT: ["2102", "3232", "4233", "5233", "3213", "3251", "2101", "3212", "3214", "4261", "3241", "4202", "6232", "6253", "6264"],
@@ -32,9 +31,7 @@
             PHYS: ["1111", "1112", "2211", "2212", "3113", "3413", "3503", "4513", "4523", "4985"],
             CS: ["1000", "1020", "1030", "1302", "3110", "3201", "3211", "6231", "6251", "6311"]
 
-        }
-
-
+        } 
         function changecat(value) {
             if (value.lenght == 0) document.getElementById("category").innerHTML = "<option></option>";
             else {
@@ -49,8 +46,7 @@
 
     <div class=main-flex-container>
 
-        <div class="buffer"></div>
-        <div class="library-logo">
+        <div id="library-logo">
             <img src="images/banner-ingram-library.png" alt="library logo">
         </div>
         <div class="form">
@@ -91,7 +87,7 @@
                     </div>
                 </div>
                 <div class="flex-container-submit">
-                    <div id="submit"><button id="searchButton" type="button">Search</button></div>
+                    <div id="submit"><button id="searchButton" type="button" onclick="window.location.href = '/all';">Search</button></div>
                 </div>
             </form>
         </div>

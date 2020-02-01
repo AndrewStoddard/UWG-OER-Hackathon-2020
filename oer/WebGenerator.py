@@ -43,8 +43,8 @@ class WebGenerator:
             for resource in resources:
                 with self.__body.tag('div'):
                     self.__body.self_close_tag('img', attributes=dict(src="images/shield.png"))
-                    self.__body.tag_with_content(resource.title, "h2")
-                    self.__body.tag_with_content(resource.author, "h4")
+                    self.__body.tag_with_content(resource.title, "h6")
+                    self.__body.tag_with_content(resource.author, "h6")
                     self.__body.tag_with_content(resource.isbn, "h6")
                     self.__body.tag_with_content(resource.type.value, "h6")
                     self.__body.tag_with_content(resource.subject, "h6")

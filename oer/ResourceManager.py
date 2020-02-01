@@ -22,14 +22,3 @@ class ResourceManager:
     def get_all_resources(self):
         return self.__resource_list
 
-if __name__ == '__main__':
-    rm = ResourceManager()
-    resourceData = {}
-    resourceData["title"] = "Test1"
-    resourceData["link"] = "Link1"
-    resourceData["author"] = "Author1"
-    resourceData["subject"] = "Subject1"
-    resourceData["type"] = Resource.Type.ARTICLE
-    resourceData["isbn"] = "ISBN1"
-    #rm.add_resource(resourceData)
-    #print(rm.get_all_resources())

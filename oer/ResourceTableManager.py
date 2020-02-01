@@ -22,7 +22,7 @@ class ResourceTableManager:
 
     def add_resource(self, resource: Resource):
         self.__cursor.execute("INSERT INTO resourcedata VALUES (?, ?, ?, ?, ?, ?, ?)",
-                              (resource.id, resource.title, resource.link, resource.author, resource.subject, resource.type.value[0], resource.isbn))
+                              (resource.id, resource.title, resource.link, resource.author, resource.subject, resource.type.value, resource.isbn))
 
     def find_resource(self, id: str) -> Resource:
         return create_resource(self.__cursor.execute("SELECT * FROM resourcedata WHERE id=?", (id,)).fetchone())

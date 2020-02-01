@@ -40,6 +40,10 @@
     width: 125px;
 }
 
+#results div div {
+    font-size: 10px;
+}
+
 #results>div {
     box-shadow: -1px 1px 2px 4px rgba(0, 0, 0, 0.75);
     background-color: #f1f1f1;
