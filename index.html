@@ -1,128 +1,13 @@
 <!DOCTYPE html>
 <html>
-<style>
-    @media screen and (max-width: 1080px) {
-        .header-name {
-            display: none;
-        }
-    }
-    
-    .header {
-        position: fixed;
-        background-color: rgba(0, 84, 166, 1);
-        width: 100%;
-        left: 0;
-        margin: 0;
-        padding: 0;
-        top: 0;
-        height: 160px;
-    }
-    
-    .header-logo {
-        display: inline-block;
-        opacity: 1;
-    }
-    
-    .header-name {
-        position: absolute;
-        float: right;
-        bottom: 0;
-        right: 20%;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-    
-    .flex-container-search {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-    }
-    
-    .flex-container-mid {
-        display: flex;
-        margin: 10px;
-        margin-top: 0;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-    }
-    
-    .flex-container-mid>div {
-        margin: 10px;
-    }
-    
-    .flex-container-submit {
-        display: flex;
-        margin: 10px;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-    }
-    
-    .search-form {
-        padding-top: 190px;
-    }
-    
-    .search-form select {
-        padding: 16px 20px;
-        border: none;
-        border-radius: 4px;
-        background-color: #f1f1f1;
-        ;
-    }
-    
-    #searchField {
-        width: 150px;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        background-color: white;
-        background-image: url('searchicon.png');
-        background-position: 10px 10px;
-        background-repeat: no-repeat;
-        padding: 12px 20px 12px 40px;
-        -webkit-transition: width 0.4s ease-in-out;
-        transition: width 0.4s ease-in-out;
-    }
-    
-    #searchField:focus {
-        width: 100%;
-    }
-    
-    .search-form button {
-        border: none;
-        color: white;
-        padding: 16px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        -webkit-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-        cursor: pointer;
-    }
-    
-    #searchButton {
-        background-color: white;
-        color: black;
-        border: 2px solid #e7e7e7;
-    }
-    
-    #searchButton:hover {
-        background-color: #e7e7e7;
-    }
-</style>
+
 
 <head>
     <title>
         UWG Library Catalog
     </title>
+    <link rel="stylesheet" type="text/css" href="style\style.css">
+
     <div class="header">
         <img src="images/word logo.png" class="header-logo">
 
@@ -133,12 +18,20 @@
 </head>
 
 <body>
-    <form class="search-form">
-        <div class="flex-container-search">
-            <div class="search-field"><input id="searchField" type="text" placeholder="Title, ISBN"></div> <br>
+    <div class=main-flex-container>
+
+        <div class="buffer"></div>
+        <div class="library-logo">
+            <img src="images/banner-ingram-library.png" alt="library logo">
         </div>
-        <div class="flex-container-mid">
-            <div><select id="subject-field">
+        <div class="form">
+            <form class="search-form">
+                <div class="flex-container-search">
+                    <div class="search-field"><input id="searchField" type="text" placeholder="Title, ISBN..."></div>
+                </div>
+
+                <div class="flex-container-mid">
+                    <div><select id="subject-field">
                     <option value="" hidden>Subject</option>
                     <option value="other/none">Other/None</option>
                     <option value="math">Math</option>
@@ -146,30 +39,31 @@
                     <option value="chemistry">Chemistry</option>
                     <option value="biology">Biology</option>
                 </select></div>
-
-            <div>
-                <select id="class-field">
+                    <div>
+                        <select id="class-field">
                     <option value="" hidden>Class</option>
                     <option value="none">Other/None</option>
                     <option value="1301">1301</option>
                     <option value="1302">1302</option>
                     <option value="3152">3151</option>
                 </select>
-            </div>
-            <div>
-                <select id="type-field">
+                    </div>
+                    <div>
+                        <select id="type-field">
                     <option value="" hidden>Type</option>
                     <option value="other/none">Other/None</option>
                     <option value="textbook">Textbook</option>
                     <option value="journals">Journals</option>
                     <option value="articles">Articles</option>
                 </select>
-            </div>
+                    </div>
+                </div>
+                <div class="flex-container-submit">
+                    <div id="submit"><button id="searchButton" type="button">Search</button></div>
+                </div>
+            </form>
         </div>
-        <div class="flex-container-submit">
-            <div id="submit"><button id="searchButton" type="button">Search</button></div>
-        </div>
-    </form>
+    </div>
 </body>
 
 </html>

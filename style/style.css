@@ -1,1 +1,161 @@
-temp css file
+@media screen and (max-width: 1080px) {
+    .header-name {
+        display: none;
+    }
+}
+
+.header {
+    position: fixed;
+    background-color: rgba(0, 84, 166, .9);
+    width: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    height: 160px;
+}
+
+.header-logo {
+    display: inline-block;
+    opacity: 1;
+}
+
+.header-name {
+    position: absolute;
+    float: right;
+    bottom: 0;
+    right: 20%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.results {
+    padding: 190px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.results>div {
+    box-shadow: -1px 1px 2px 4px rgba(0, 0, 0, 0.75);
+    background-color: #f1f1f1;
+    width: 300px;
+    margin: 10px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 30px;
+    transition: all .2s ease-in-out;
+}
+
+.results>div:hover {
+    transform: scale(1.05);
+}
+
+.main-flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: normal;
+}
+
+.flex-container-mid {
+    display: flex;
+    margin: 10px;
+    margin-top: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.flex-container-mid>div {
+    margin: 10px;
+}
+
+.flex-container-submit {
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.search-form select {
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+form input[type="text"] {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 10px;
+    text-align: center;
+}
+
+.search-form button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#searchButton {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+}
+
+#searchButton:hover {
+    background-color: #e7e7e7;
+}
+
+.buffer {
+    padding-top: 200px;
+    margin-left: 40%;
+    margin-right: 30%;
+}
+
+.library-logo {
+    margin-left: 40%;
+    margin-right: 30%;
+}
+
+.add-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.type-div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#type-add-field {
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
