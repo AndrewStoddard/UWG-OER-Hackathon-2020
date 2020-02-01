@@ -1,0 +1,2 @@
+What Data do you want to enter for a Resource entry?
+What means of searching do you want us to prioritize?
