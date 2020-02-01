@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="style\style.css">
 
     <div class="header">
-        <img src="images/word logo.png" class="header-logo">
+        <img src="images/word_logo.png" class="header-logo">
 
         <h1 class="header-name">Name Place Holder</h1>
 
@@ -18,6 +18,35 @@
 </head>
 
 <body>
+
+    <script>
+        var catagories = {
+            ACCT: ["2102", "3232", "4233", "5233", "3213", "3251", "2101", "3212", "3214", "4261", "3241", "4202", "6232", "6253", "6264"],
+            BIOL: ["1013", "1110", "2021", "2022", "2030", "2108", "3513", "4503", "4732", "5732", "6503", "6513", "1107", "3242", "1010", "1108", "3310", "4730", "5730", "1014", "2107", "3134", "4241", "4315", "4981", "4983", "5241", "5315", "6982"],
+            COMM: ["4413", "4414", "4485", "3310", "3351", "3353", "3355", "4220", "4408", "4421", "4425", "4444", "4450", "4454", "4455", "4484"],
+            CRIM: ["2275", "3705", "1100", "2000", "2245", "2272", "2273", "2276", "3240", "4000", "4211", "4231", "4250", "4693", "5231", "2274", "3241", "3333", "3411", "4003", "4233", "4280", "4284", "4712", "4911", "3323", "4200", "4230", "4232", "4248", "4255", "4277", "4293", "4402", "4650", "6000", "6013", "6360", "6623"],
+            FINC: ["3501", "3511", "4521", "4561", "4531", "4541", "4532", "4542", "6532", "6542"],
+            GEOG: ["1013", "1112", "2553", "4600", "1113", "4553", "4562", "5553", "3643", "4084", "5551", "1121", "5985", "3004", "3014", "3603", "4024"],
+            MATH: ["1111", "1413", "2063", "1001", "1113", "1634", "2008", "2644", "2654", "2853", "3303", "3703", "3803", "6203", "6483", "1112", "1401", "3003", "3243", "4043", "4213", "4413", "4803", "5043", "5213", "5803", "6043", "6213", "6743"],
+            HIST: ["2112", "4385", "6302", "6685", "1112", "1111", "2111", "2302", "3326", "3363", "3500", "4285", "4404", "4440", "4441", "4474", "5385", "5404", "5441", "5474", "6301", "6684", "6686", "6687"],
+            PHYS: ["1111", "1112", "2211", "2212", "3113", "3413", "3503", "4513", "4523", "4985"],
+            CS: ["1000", "1020", "1030", "1302", "3110", "3201", "3211", "6231", "6251", "6311"]
+
+        }
+
+
+        function changecat(value) {
+            if (value.lenght == 0) document.getElementById("category").innerHTML = "<option></option>";
+            else {
+                var catOptions = "";
+                for (categoryId in catagories[value]) {
+                    catOptions += "<option>" + catagories[value][categoryId] + "</option>";
+                }
+                document.getElementById("category").innerHTML = catOptions;
+            }
+        }
+    </script>
+
     <div class=main-flex-container>
 
         <div class="buffer"></div>
@@ -31,21 +60,24 @@
                 </div>
 
                 <div class="flex-container-mid">
-                    <div><select id="subject-field">
+                    <div><select id="subject-field" onchange="changecat(this.value);">
                     <option value="" hidden>Subject</option>
-                    <option value="other/none">Other/None</option>
-                    <option value="math">Math</option>
-                    <option value="computerScience">CS</option>
-                    <option value="chemistry">Chemistry</option>
-                    <option value="biology">Biology</option>
+                    <option value="ACCT">ACCT</option>
+                    <option value="BIOL">BIOL</option>
+                    <option value="COMM">COMM</option>
+                    <option value="CRIM">CRIM</option>
+                    <option value="FINC">FINC</option>
+                    <option value="GEOG">GEOG</option>
+                    <option value="MATH">MATH</option>
+                    <option value="HIST">HIST</option>
+                    <option value="PSYS">PSYS</option>
+                    <option value="CS">CS</option>
+
                 </select></div>
                     <div>
-                        <select id="class-field">
-                    <option value="" hidden>Class</option>
-                    <option value="none">Other/None</option>
-                    <option value="1301">1301</option>
-                    <option value="1302">1302</option>
-                    <option value="3152">3151</option>
+                        <select name="category" id="category">
+                    <!-- <option value="" hidden>Class</option> -->
+                    <option value="" disabled selected>Select</option>
                 </select>
                     </div>
                     <div>
