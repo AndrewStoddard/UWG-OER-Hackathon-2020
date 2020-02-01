@@ -135,23 +135,23 @@ form input[type="text"] {
     background-color: #e7e7e7;
 }
 
-.buffer {
+#buffer {
     padding-top: 200px;
     margin-left: 40%;
     margin-right: 30%;
 }
 
-.library-logo {
+#library-logo {
     margin-left: 40%;
     margin-right: 30%;
 }
 
-.add-form {
+#add-form {
     display: flex;
     flex-direction: column;
 }
 
-.type-div {
+#type-div {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -195,7 +195,7 @@ form input[type="text"] {
     background-color: #e7e7e7;
 }
 
-.submit-div {
+#submit-div {
     display: flex;
     justify-content: center;
     align-content: center;
