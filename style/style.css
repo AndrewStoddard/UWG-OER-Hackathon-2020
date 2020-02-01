@@ -142,8 +142,7 @@ form input[type="text"] {
 }
 
 #library-logo {
-    margin-left: 40%;
-    margin-right: 30%;
+    align-self: center;
 }
 
 #add-form {
