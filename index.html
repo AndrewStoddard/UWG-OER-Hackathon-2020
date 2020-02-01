@@ -10,7 +10,12 @@
 
     <div id="header">
         <img src="images/word_logo.png">
-        <h1 class="header-name">Name Place Holder</h1>
+        <div id="nav">
+            <ul>
+                <li><a class="active" href="/index.html">Search</a></li>
+                <li><a href="/add">Add</a></li>
+            </ul>
+        </div>
 
 
     </div>
@@ -31,7 +36,8 @@
             PHYS: ["1111", "1112", "2211", "2212", "3113", "3413", "3503", "4513", "4523", "4985"],
             CS: ["1000", "1020", "1030", "1302", "3110", "3201", "3211", "6231", "6251", "6311"]
 
-        } 
+        }
+
         function changecat(value) {
             if (value.lenght == 0) document.getElementById("category").innerHTML = "<option></option>";
             else {

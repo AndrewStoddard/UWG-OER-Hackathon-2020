@@ -6,62 +6,68 @@
     <link rel="stylesheet" type="text/css" href="/style.css">
     <div id="header">
         <img src="images/word_logo.png" class="header-logo">
-        <h1 class="header-name">Name Place Holder</h1>
+        <div id="nav">
+            <ul>
+                <li><a href="/index.html">Search</a></li>
+                <li><a class="active" href="/add">Add</a></li>
+            </ul>
+        </div>
     </div>
 </head>
 
 <body>
     <!-- title author isbm link subject type -->
     <div id="buffer"></div>
-    <div id="library-logo">
-        <img src="images/banner-ingram-library.png" alt="library logo">
-    </div>
-    <div id="form">
-        <form class="add-form">
-            <div id="title-div">
+    <div class="main-flex-container">
+        <div id="library-logo">
+            <img src="images/banner-ingram-library.png" alt="library logo">
+        </div>
+        <div id="form">
+            <form class="add-form">
+                <div id="title-div">
 
-                <input name="title" id="title-field" type="text" placeholder="Title..." required>
+                    <input name="title" id="title-field" type="text" placeholder="Title..." required>
 
-            </div>
-            <div id="author-div">
+                </div>
+                <div id="author-div">
 
-                <input name="author" id="author-field" type="text" placeholder="Author...">
+                    <input name="author" id="author-field" type="text" placeholder="Author..." required>
 
-            </div>
-            <div id="isbn-div">
-
-
-                <input name="isbn" id="isbn-field" type="text" placeholder="ISBN...">
-            </div>
-
-            <div id="subject-div">
+                </div>
+                <div id="isbn-div">
 
 
-                <input name="subject" id="subject-field" type="text" placeholder="Subject...">
-            </div>
+                    <input name="isbn" id="isbn-field" type="text" placeholder="ISBN..." required>
+                </div>
 
-            <div id="link-div">
+                <div id="subject-div">
 
 
-                <input name="link" id="link-field" type="text" placeholder="Link..." required>
-            </div>
-            <div id="type-div">
-                <select name="type" id="type-add-field" required>
+                    <input name="subject" id="subject-field" type="text" placeholder="Subject..." required>
+                </div>
+
+                <div id="link-div">
+
+
+                    <input name="link" id="link-field" type="text" placeholder="Link..." required>
+                </div>
+                <div id="type-div">
+                    <select name="type" id="type-add-field" required>
                     <option value="" hidden>Type</option>
                     <option value="Other">Other/None</option>
                     <option value="Text Book">Textbook</option>
-                    <option value="Journals">Journals</option>
-                    <option value="Articles">Articles</option>
+                    <option value="Journal">Journals</option>
+                    <option value="Article">Articles</option>
                 </select>
-            </div>
-            <div id="submit-div">
-                <button id="add-submit" formmethod="post" type="submit">Add</button>
-            </div>
+                </div>
+                <div id="submit-div">
+                    <button id="add-submit" formmethod="post" type="submit">Add</button>
+                </div>
 
-        </form>
+            </form>
 
+        </div>
     </div>
-
 </body>
 
 </html>
